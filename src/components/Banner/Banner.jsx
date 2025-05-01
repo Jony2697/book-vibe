@@ -1,5 +1,6 @@
 import React from 'react';
-import bookimage from '../../assets/books.jpg';
+// import bookimage from '../../assets/books.jpg';
+import manybooks from '../../assets/manyBooks.png';
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 </style>
@@ -13,7 +14,7 @@ const Banner = () => {
                 <button className='btn  bg-[#23BE0A] text-white mt-10'>View The List</button>
             </div>
             <div>
-                <img src={bookimage} alt="" />
+                <img width={500} src={manybooks} alt="" />
             </div>
         </div>
     );
