@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { getStoredBook } from '../../Utility/addToDb';
 import Book from '../Book/Book';
+import About from '../../pages/About/About';
 
 const ReadList = () => {
     const [readList, setReadList] = useState([]);
@@ -16,10 +17,13 @@ const ReadList = () => {
         const convertedStoredBooks = storedBookData.map(id => parseInt(id));
         const myReadList = data.filter(book => convertedStoredBooks.includes(book.bookId));
         setReadList(myReadList);
-
-        // console.log(convertedStoredBooks);
+        console.log(myReadList);
+        
+        
+        console.log(convertedStoredBooks);
 
     }, [])
+    
 
     const handleSort = (type) => {
         setSort(type);
