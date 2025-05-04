@@ -6,8 +6,8 @@ import { Link } from "react-router";
 const Book = ({ singleBook }) => {
     // const data=use(bookPromise);
 
-    console.log(singleBook);
-    const { bookId,bookName, author, image, rating, category, tags, yearOfPublishing } = singleBook
+    // console.log(singleBook);
+    const { bookId,bookName, author, image, rating, category, tags, totalPages } = singleBook
 
 
 
@@ -23,12 +23,12 @@ const Book = ({ singleBook }) => {
                 <div className="card-body">
                     <div className="flex gap-3 font-semibold">
                         {
-                            tags.map(tag => <button className="bg-gray-100 text-green-600 p-3 rounded-2xl">{tag}</button>)
+                            tags.map((tag,index) => <button key={index} className="bg-gray-100 text-green-600 p-3 rounded-2xl">{tag}</button>)
                         }
                     </div>
                     <h2 className="card-title playfair-display text-xl">
                         {bookName}
-                        <div className="badge badge-secondary">{yearOfPublishing}</div>
+                        <div className="badge badge-secondary">{totalPages}</div>
                     </h2>
                     <p className='font-semibold '>By : {author}</p>
                     <span className='border-b border-dashed p-2'></span>
